@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html><html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrapの基本テンプレート</title>
+
+<!-- ここがBootstrapのCDN -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css";; rel="stylesheet">
+<!-- ここにstylesheetを追加 -->
+<link rel="stylesheet" href="/static/css/style4.css">
+<!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>;;
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>;;
+<![endif]-->
+</head>
+<body>
+	<div style="text-align: center">
+		<div class="changeall">
+			<a href='/' class="change">ビジョン候補(仮)</a>
+			<a href='/index1' class="change">index1へ</a>
+			<a href='/index2' class="change">index2へ</a>
+			<a href='/index3' class="change">index3へ</a></div>
+		<div class="camera"></div>
+		
+		<div class="tab-wrap">
+			<input id="tab01" type="radio" name="tab" class="tab-switch" checked="checked"><label class="tab-label" for="tab01">捕獲扉</label>
+			<div class="tab-content">
+				<button id="gate_btn" class="button_door">捕獲扉を閉じる</button>
+				<button id="streaming_btn" class="button_camera">カメラ映像を止める</button>
+				<fieldset>
+					<legend>見たいカメラを選択し、ボタンを押してください</legend>
+					<div>
+						<input type="radio" id="camera_a" name="camera" value="camera_a" checked />
+						<label for="camera_a">カメラA</label>
+						<input type="radio" id="camera_b" name="camera" value="camera_b" />
+						<label for="camera_b">カメラB</label>
+						<input type="radio" id="camera_c" name="camera" value="camera_c" />
+						<label for="camera_c">カメラC</label>
+						<input type="radio" id="camera_d" name="camera" value="camera_d" />
+						<label for="camera_d">カメラD</label>
+					</div>
+					<div>
+						<button id="change_camera_btn" class="button_camera_change">カメラを切り替える</button>
+					</div>
+				</fieldset>
+			</div>
+			<input id="tab02" type="radio" name="tab" class="tab-switch"><label class="tab-label" for="tab02">給餌機</label>
+			<div class="tab-content">
+				<p id="feeder_remaining" style="border: 3px solid">残りの給餌回数:4</p>
+				<button id="feeder_btn" class="button_feeding_stop">給餌機を停止する</button>
+				<button id="feeder_once_btn" class="button_feeding_now">手動で給餌する</button>
+			</div>
+			<input id="tab03" type="radio" name="tab" class="tab-switch"><label class="tab-label" for="tab03">設定</label>
+			<div class="tab-content">
+				<button id="reboot_btn" class="reboot">システム再起動</button>
+			</div>
+		</div>
+	</div>
+    <!-- ここがBootstrapのCDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";></script>;
+	<!-- ここがBootstrapのCDN -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js";></script>;
+</body>
+</html>
